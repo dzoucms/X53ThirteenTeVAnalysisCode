@@ -124,7 +124,29 @@ int main(int argc, char* argv[]){
   sig_samples["X53X53m1500LH_Inc"]="/eos/uscms/store/user/lpctlbsm/clint/Spring15/25ns/Approval/ljmet_trees/ljmet_X53X53m1500LH_Inc.root";
   sig_samples["X53X53m1600LH_Inc"]="/eos/uscms/store/user/lpctlbsm/clint/Spring15/25ns/Approval/ljmet_trees/ljmet_X53X53m1600LH_Inc.root";
 
-  
+  // Dave ljmet trees PHYS14
+  sig_samples["X53Tm700RH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-700_right_Tune4C_13TeV-madgraph-tauola.root";   
+  sig_samples["X53Tm800RH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-800_right_Tune4C_13TeV-madgraph-tauola.root";   
+  sig_samples["X53Tm900RH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-900_right_Tune4C_13TeV-madgraph-tauola.root";   
+  sig_samples["X53Tm1000RH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1000_right_Tune4C_13TeV-madgraph-tauola.root";
+  sig_samples["X53Tm1100RH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1100_right_Tune4C_13TeV-madgraph-tauola.root";
+  sig_samples["X53Tm1200RH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1200_right_Tune4C_13TeV-madgraph-tauola.root";
+  sig_samples["X53Tm1300RH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1300_right_Tune4C_13TeV-madgraph-tauola.root";
+  sig_samples["X53Tm1400RH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1400_right_Tune4C_13TeV-madgraph-tauola.root";
+  sig_samples["X53Tm1500RH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1500_right_Tune4C_13TeV-madgraph-tauola.root";
+  sig_samples["X53Tm1600RH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1600_right_Tune4C_13TeV-madgraph-tauola.root";
+  sig_samples["X53Tm700LH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-700_left_Tune4C_13TeV-madgraph-tauola.root";    
+  sig_samples["X53Tm800LH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-800_left_Tune4C_13TeV-madgraph-tauola.root";    
+  sig_samples["X53Tm900LH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-900_left_Tune4C_13TeV-madgraph-tauola.root";    
+  sig_samples["X53Tm1000LH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1000_left_Tune4C_13TeV-madgraph-tauola.root";  
+  sig_samples["X53Tm1100LH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1100_left_Tune4C_13TeV-madgraph-tauola.root";  
+  sig_samples["X53Tm1200LH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1200_left_Tune4C_13TeV-madgraph-tauola.root";  
+  sig_samples["X53Tm1300LH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1300_left_Tune4C_13TeV-madgraph-tauola.root";  
+  sig_samples["X53Tm1400LH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1400_left_Tune4C_13TeV-madgraph-tauola.root";  
+  sig_samples["X53Tm1500LH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1500_left_Tune4C_13TeV-madgraph-tauola.root";  
+  sig_samples["X53Tm1600LH"]="/eos/uscms/store/user/lpctlbsm/dzou/PHYS14/Single_SSDL/PU20/ljmet_trees/ljmet_tree_T53TTo2L2Nu_M-1600_left_Tune4C_13TeV-madgraph-tauola.root";
+
+  /*  
   sig_samples["X53Tm700RH"]="/eos/uscms/store/user/lpctlbsm/clint/Spring15/25ns/Approval/ljmet_trees/ljmet_X53TToAll_M-700_right.root";
   sig_samples["X53Tm800RH"]="/eos/uscms/store/user/lpctlbsm/clint/Spring15/25ns/Approval/ljmet_trees/ljmet_X53TToAll_M-800_right.root";
   sig_samples["X53Tm900RH"]="/eos/uscms/store/user/lpctlbsm/clint/Spring15/25ns/Approval/ljmet_trees/ljmet_X53TToAll_M-900_right.root";
@@ -145,6 +167,7 @@ int main(int argc, char* argv[]){
   sig_samples["X53Tm1400LH"]="/eos/uscms/store/user/lpctlbsm/clint/Spring15/25ns/Approval/ljmet_trees/ljmet_X53TToAll_M-1400_left.root";
   sig_samples["X53Tm1500LH"]="/eos/uscms/store/user/lpctlbsm/clint/Spring15/25ns/Approval/ljmet_trees/ljmet_X53TToAll_M-1500_left.root";
   sig_samples["X53Tm1600LH"]="/eos/uscms/store/user/lpctlbsm/clint/Spring15/25ns/Approval/ljmet_trees/ljmet_X53TToAll_M-1600_left.root";
+  */
 
   //data samples
   data_samples["Data"]="/eos/uscms/store/user/lpctlbsm/clint/Run2015D/Nov17/ljmet_trees/ljmet_Data_All.root";
@@ -475,12 +498,15 @@ int main(int argc, char* argv[]){
 
 
     //require OR of triggers but make each channel consistent
+    // dzou - comment out trigger requirements for use with PHYS14 ljmet - trigger menus have changed 
+    bool skip = false;
+    /*  
     bool skip = true;
     if(mumu && tr->HLT_Mu27TkMu8) skip =false;
     if(elmu && (tr->HLT_Mu8Ele17 || tr->HLT_Mu17Ele12)) skip = false;
     if(elel && tr->HLT_Ele17Ele12) skip = false;
     if(skip) continue;
-
+*/
 
     //now skip if not the channel from the corresponding dataset
     if((argv1=="DataMuMu" || argv1=="NonPromptDataMuMu") && !mumu) continue;
