@@ -200,7 +200,7 @@ std::vector<TH1F*> getNPHistos(int nMu){
 
 
 Sample* getDataSample(std::string cut,std::string elID, std::string muID){
-  std::string filename = testDir+muID+"_El"+elID+".root";
+  std::string filename = testDir+"Data_Mu"+muID+"_El"+elID+".root";
   TFile* tfile = new TFile(filename.c_str());
   Sample* dataSample = new Sample("Data",tfile,1,1,cut,kBlack,1);
   return dataSample;
