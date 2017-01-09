@@ -21,6 +21,7 @@ TreeReader::~TreeReader(){
 }
 //need to actually get the data
 Int_t TreeReader::GetEntry(Long64_t entry){
+  printf("starting getentry\n");
   //delete anything hanging out in memory
   for (unsigned int i = 0;i<allMuons.size();++i ) delete allMuons[i];
   for (unsigned int i = 0;i<allElectrons.size();++i ) delete allElectrons[i];
@@ -56,23 +57,30 @@ Int_t TreeReader::GetEntry(Long64_t entry){
     genParticles.clear();
     hadronicGenJets.clear();
   }
+  printf("Getentry: finished clear()\n");
 
   //check to make sure not empty
   if (!tree) return 0;  
-  ////std::cout<<"getting size of input vectors"<<std::endl;
+  std::cout<<"getting size of input vectors"<<std::endl;
   int stat =  tree->GetEntry(entry);
+  printf("stat tree gen entry...\n");
   unsigned int nMuons = muPt->size();
   unsigned int nElectrons = elPt->size();
+  printf("size ak4jet...\n");
   unsigned int nAK4Jets = AK4JetPt->size();
+  printf("size n clean ak4jet...\n");
   unsigned int nCleanedAK4Jets = cleanedAK4JetPt->size();
   //std::cout<<"getting number of ak8 jets"<<std::endl;
+  printf("size ak8jet...\n");
   unsigned int nAK8Jets = AK8JetPt->size();
   ////std::cout<<"making collections"<<std::endl;
+  printf("make all electrons...\n");
   //make all electrons
   for(unsigned int i=0; i<nElectrons;i++){
     allElectrons.push_back(new TElectron((*elPt)[i],(*elEta)[i],(*elPhi)[i],(*elEnergy)[i],(*elCharge)[i],(*elGsfCharge)[i],(*elCtfCharge)[i],(*elScPixCharge)[i],(*elDeta)[i],(*elDphi)[i],(*elDZ)[i],(*elSIP3d)[i],(*elD0)[i],(*elHoE)[i],(*elMHits)[i],(*elOoemoop)[i],(*elSihih)[i],(*elchIso)[i],(*elpuIso)[i],(*elneutIso)[i],(*elphotIso)[i],(*elrhoIso)[i],(*elAEff)[i],(*elPassConversionVeto)[i],(*elChargeConsistent)[i],(*elMVA)[i], (*elMiniIso)[i], (*elSusyIso)[i]) );
 
   }
+  printf("make all muons...\n");
 
   //make all muons
   for(unsigned int i=0; i<nMuons;i++){
@@ -128,6 +136,7 @@ Int_t TreeReader::GetEntry(Long64_t entry){
       genJets.push_back(new TJet( (*genJetPt)[i], (*genJetEta)[i], (*genJetPhi)[i],(*genJetEnergy)[i]) );
     }
     
+  printf("make gen par...\n");
     
     //make genparticle collection
     for(unsigned int i=0; i< genPt->size() ; i++){
@@ -140,6 +149,7 @@ Int_t TreeReader::GetEntry(Long64_t entry){
     }
 
   }
+  printf("make goodMuon...\n");
 
   //now from allMuons make goodMuons
 
@@ -175,6 +185,7 @@ Int_t TreeReader::GetEntry(Long64_t entry){
   }
 
 
+  printf("make clean jet collection...\n");
 
 
   //make clean jets collection
@@ -197,13 +208,13 @@ Int_t TreeReader::GetEntry(Long64_t entry){
       float deltaR = pow( pow( jet->eta - mu->eta,2) + pow( jet->phi - mu->phi,2), 0.5);
       if(deltaR <0.4) cleanLV= cleanLV - mu->lv;
     }
-    //std::cout<<"adding simple cleaned jet"<<std::endl;
+    std::cout<<"adding simple cleaned jet"<<std::endl;
     //only add if pt still greater than 30
     if(cleanLV.Pt()>30) simpleCleanedAK4Jets.push_back(new TJet(cleanLV.Pt(),cleanLV.Eta(),cleanLV.Phi(),cleanLV.Energy()));
 
   }
 
-  //std::cout<<"finished getting entry"<<std::endl;
+  std::cout<<"finished getting entry"<<std::endl;
 
   return stat;
 }
