@@ -35,7 +35,7 @@ int main(int argc, char* argv[]){
   std::string ID = argv[3];
 
   bool correctusage=false;
-  if(argc==4 && (argv1.find("Data")!=std::string::npos || argv1.find("MC")!=std::string::npos ) && (argv2.find("25ns")!=std::string::npos || argv2.find("2016")!=std::string::npos) ) correctusage=true;
+  if(argc==4 && (argv1.find("Data")!=std::string::npos || argv1.find("MC")!=std::string::npos || true )  && (argv2.find("25ns")!=std::string::npos || argv2.find("2016")!=std::string::npos) ) correctusage=true; //add or true to argv1 to skip argv1 check for using now - dzou
   if(!correctusage){
     std::cout<<"Need to specify whether running on Data or MC and 25 or 50ns. The four possible ways of running are\n"
 	     <<"./ChargeMisID.o Data 50ns ID \n"
@@ -49,6 +49,8 @@ int main(int argc, char* argv[]){
   std::string filename;
   bool data;
   bool FiftyNS;
+
+  std::string eosarea="root://cmseos.fnal.gov//store/user/clint/Spring16/25ns/Dec14/ljmet_trees/";
 
   if(argv1=="Data" && argv2=="50ns") {filename="root://cmseos.fnal.gov//store/user/clint/Run2015B/ljmet_trees/ljmet_Data_ElEl.root"; data=true; FiftyNS=true;}
   else  if(argv1=="Data"){
@@ -64,6 +66,15 @@ int main(int argc, char* argv[]){
   }
   else if(argv1=="MC" && argv2=="50ns") {filename="root://cmseos.fnal.gov//store/user/clint/PHYS14/50ns/ljmet_trees/ljmet_DYJets.root"; data=false; FiftyNS=true;}
   else if(argv1=="MC" && argv2=="25ns") {filename="root://cmseos.fnal.gov//store/user/clint/Spring15/25ns/Nov16/ljmet_trees/ljmet_DYJets.root"; data=false; FiftyNS=false;}
+  else if(argv1=="TTH" && argv2=="25ns") {filename=eosarea+"/ljmet_TTH.root"; data=false; FiftyNS=false;}
+  else if(argv1=="TTTT" && argv2=="25ns") {filename=eosarea+"/ljmet_TTTT.root"; data=false; FiftyNS=false;}
+  else if(argv1=="TTZ" && argv2=="25ns") {filename=eosarea+"/ljmet_TTZ.root"; data=false; FiftyNS=false;}
+  else if(argv1=="WpWp" && argv2=="25ns") {filename=eosarea+"/ljmet_WpWp.root"; data=false; FiftyNS=false;}
+  else if(argv1=="WWZ" && argv2=="25ns") {filename=eosarea+"/ljmet_WWZ.root"; data=false; FiftyNS=false;}
+  else if(argv1=="WZ" && argv2=="25ns") {filename=eosarea+"/ljmet_WZ.root"; data=false; FiftyNS=false;}
+  else if(argv1=="WZZ" && argv2=="25ns") {filename=eosarea+"/ljmet_WZZ.root"; data=false; FiftyNS=false;}
+  else if(argv1=="ZZ" && argv2=="25ns") {filename=eosarea+"/ljmet_ZZ.root"; data=false; FiftyNS=false;}
+  else if(argv1=="ZZZ" && argv2=="25ns") {filename=eosarea+"/ljmet_ZZZ.root"; data=false; FiftyNS=false;}
   else{
     std::cout<<"Need to specify whether running on Data or MC and 25 or 50ns. The four possible ways of running are\n"
 	     <<"./ChargeMisID.o Data 50ns \n"
@@ -75,7 +86,7 @@ int main(int argc, char* argv[]){
   //make filename for output root file
   std::string outname;
   if(data)outname="ChargeMisID_Data_"+argv2+"_Electrons_"+ID+".root"; 
-  else outname="ChargeMisID_MC_Electrons_"+ID+".root"; 
+  else outname="ChargeMisID_MC_Electrons_"+ID+"_"+argv1+".root"; 
   //open output file
   TFile* fout= new TFile(outname.c_str(),"RECREATE");
 
